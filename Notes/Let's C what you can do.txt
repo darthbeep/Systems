@@ -1,0 +1,15 @@
+//Aim: Let's C what you can do.
+
+//Do now: Write a simple hello world in java
+public class HelloWorld {
+  public static void main(String args[]) {
+    System.out.println("Hello World");
+  }
+}
+//Hello world in C
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  printf("Hello World" );
+  return 0;
+}

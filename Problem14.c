@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-char blocked[1000000] = {0};
+int blocked[1000000] = {0};
 
 int length(long test) {
   long n = test;
@@ -10,10 +10,10 @@ int length(long test) {
   while (n != 1) {
     //printf("%s%ld\n","very",n );
     if (n < 1000000) {
-      if (blocked[n] == 1) {
+      if (blocked[n] != 0) {
         return len + blocked[n];
       }
-      blocked[n] = storagelen(n);
+      //blocked[n] = len(n);
     }
     if (n % 2 == 0) {
       n = n/2;
@@ -21,19 +21,22 @@ int length(long test) {
     else {
       n = (3 *n) + 1;
     }
+    if (n < 1000000) {
+      blocked[n] = length(n);
+    }
     len++;
   }
   //printf("%s %d\n","fun", len );
   return len + 1;
 }
-int storagelen(long get) {
+/*int storagelen(long get) {
   long n = get;
   int len = 0;
   //printf("%s%ld\n","not" ,n);
   while (n != 1) {
     //printf("%s%ld\n","very",n );
     if (n < 1000000) {
-      if (blocked[n] == 1) {
+      if (blocked[n] != 0) {
         return len + blocked[n];
       }
       blocked[n] = len;
@@ -48,7 +51,7 @@ int storagelen(long get) {
   }
   //printf("%s %d\n","fun", len );
   return len + 1;
-}
+}*/
 int main(int argc, char const *argv[]) {
   //printf("%s\n","test" );
   int lenstore = 0;

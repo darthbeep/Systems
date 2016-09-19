@@ -10,7 +10,7 @@ void getInupt(/* arguments */) {
   fp = fopen("/Users/shpeters/Desktop/Systems/pe81data.txt", "r");
   char hold[500];
   if (fp == NULL) {
-    printf("sigh\n");
+    printf("If you're running into this error, you probably didn't change the path to the file that gives the data.\nYou should really do that.\n");
   }
   for (int i = 0; i < 80; i++) {
     fscanf(fp, "%s", hold);

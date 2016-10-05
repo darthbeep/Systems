@@ -41,7 +41,7 @@ int main(int argc, char const *argv[]) {
   char o[10] = "Intro";
   char p[10] = "Intro";
   char q[10] = "Music";
-  strncats(o, p, q, 4);
+  strncats(o, p, q, 3);
   char r[] = "I'm out of ideas";
   strstrs(r, r, "idea");
   return 0;

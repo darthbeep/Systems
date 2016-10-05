@@ -1,4 +1,6 @@
 strings: strings.c
 	gcc strings.c
+clean:
+	rm *~	
 run: strings
-	./a.out
+	./strings
